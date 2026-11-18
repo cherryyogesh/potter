@@ -1,0 +1,188 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0a0c17"><meta name="description" content="Potter AI — local-first personal assistant"><link rel="manifest" href="/static/manifest.json"><title>Potter AI — Your Personal Intelligence</title><style>
+:root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#090d19;color:#f4f2ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#2a2555 0%,#0a0e1d 54%,#070b14 100%);min-height:100vh}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #a59cff;outline-offset:3px}.wrap{max-width:990px;margin:0 auto;padding:25px 18px 65px}.top,.brand,.row,.inline{display:flex;align-items:center;gap:12px}.top,.row.between{justify-content:space-between}.brandmark{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,#544bda,#ba69fd);display:grid;place-items:center;font-size:27px;box-shadow:0 12px 30px #6c5ad544}.brand h1{font-size:20px;letter-spacing:2px;margin:0}.muted{color:#a3acca}.tiny{font-size:12px}.pill{font-size:11px;color:#81e7ce;background:#132d30;border:1px solid #2f605c;border-radius:999px;padding:7px 10px}.pill.offline{color:#ff8a8a;background:#2d1320;border-color:#5c2f3a}.pill.pulling{color:#ffd580;background:#2d2813;border-color:#5c532f}.nav{display:flex;gap:4px;overflow:auto;padding:5px;background:#171c30;border:1px solid #29304a;border-radius:18px;margin:25px 0 20px}.nav button{white-space:nowrap;flex:1;background:transparent;border:0;color:#9ea8c9;padding:12px 13px;border-radius:13px;font-size:13px;font-weight:700}.nav button.active{color:#fff;background:#35315e;box-shadow:0 3px 15px #08091555}.view[hidden]{display:none}.panel{background:linear-gradient(145deg,#192039,#11172b);border:1px solid #313951;border-radius:23px;padding:23px}.hero{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:16px}.eyebrow{font-size:11px;letter-spacing:1.8px;font-weight:700;color:#a7b0d7}h2{margin:8px 0;font-size:clamp(24px,4vw,35px)}h3{margin:4px 0 13px;font-size:17px}.glowtext{color:#b8a4ff}.orb-wrap{text-align:center}.orb{width:220px;height:220px;margin:25px auto 18px;display:grid;place-items:center;border-radius:50%;position:relative;background:radial-gradient(circle at 28% 23%,#f5e1ff,#b49aff 24%,#7654db 57%,#1e306d 95%);box-shadow:0 0 0 14px #8872f311,0 0 0 38px #6b6fec0b,0 0 100px #7365e46a}.orb:before{content:'';position:absolute;inset:-15px;border:2px dashed #8680d999;border-radius:50%}.orb:after{content:'';position:absolute;inset:28px;border-radius:50%;background:linear-gradient(130deg,#ffffff25,transparent 45%);transform:rotate(-30deg)}.orb.live{animation:pulse 1.1s infinite alternate}@keyframes pulse{to{transform:scale(1.035);box-shadow:0 0 0 24px #8872f31c,0 0 95px #9877f9a3}}.symbol{font-size:62px;color:#fff;z-index:1}.buttons,.formrow{display:flex;gap:9px;flex-wrap:wrap}.btn{border:0;border-radius:13px;background:linear-gradient(100deg,#695cf0,#ae6df1);padding:12px 17px;color:#fff;font-weight:700}.btn.secondary{background:#29334f}.btn.warn{background:#633449}.btn.small{padding:7px 11px;font-size:12px}.btn.outline{border:1px solid #41496a;background:transparent}.btn.success{background:#1a5c3a}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.tile{padding:15px;background:#1a2239;border:1px solid #303954;border-radius:18px;min-height:105px}.tile .emoji{font-size:25px;display:block}.tile strong{display:block;margin-top:8px;font-size:14px}.tile small{font-size:11px;color:#aeb8d1}.status{font-size:13px;color:#adc3e0;min-height:20px;margin-top:10px;line-height:1.5}.bubble{padding:13px 16px;background:#25304b;border-radius:16px;margin:10px 0;white-space:pre-wrap;line-height:1.55;overflow-wrap:anywhere}.bubble.you{margin-left:13%;background:#3b3774}.messages{height:380px;overflow:auto;padding-right:5px}.formrow input{flex:1;min-width:170px}input,textarea{background:#10182b;border:1px solid #414969;border-radius:12px;padding:12px 13px;color:#f7f4ff;width:100%}input[type=checkbox]{width:auto;accent-color:#9f86f9}input[type=datetime-local]{color-scheme:dark}select{background:#10182b;border:1px solid #414969;border-radius:12px;padding:10px 13px;color:#f7f4ff;font:inherit;width:100%}.stack{display:grid;gap:15px}.section{padding:15px;background:#151d32;border:1px solid #303953;border-radius:17px}.section h3{margin-bottom:12px}.items{list-style:none;padding:0;margin:0}.items li{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:12px 0;border-top:1px solid #303953;line-height:1.5}.items li:first-child{border-top:0}.items .text{overflow-wrap:anywhere;flex:1;font-size:14px}.items .meta{font-size:11px;color:#a0aec8}.two{display:grid;grid-template-columns:1fr 1fr;gap:15px}.agent{padding:16px;border-radius:16px;background:#161f35;border:1px solid #303953}.agent .tag{font-size:11px;color:#90e8c9}.agent .tag.later{color:#b5afd2}.agent h3{margin:6px 0}.agent p{font-size:13px;color:#a8b5d0;margin:0;line-height:1.45}.notice{background:#1c263a;border:1px solid #354962;border-radius:14px;padding:13px 15px;color:#b7c7e2;font-size:13px;line-height:1.6}.footer{padding:29px 0 0;text-align:center;color:#7e8aa9;font-size:11px}.hide{display:none!important}.safe{color:#80e8cf}.right{margin-left:auto}.spaced{margin-top:19px}label{font-size:12px;color:#aeb7d3;display:block;margin:0 0 7px}.island{padding:12px;background:#131d33;border-radius:15px}.checkrow{display:flex;align-items:center;gap:10px}.checkrow label{margin:0}.smallmuted{font-size:11px;color:#9daaca}.taskdone{text-decoration:line-through;opacity:.56}
+.model-card{padding:14px;background:#161f35;border:1px solid #303953;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:12px}.model-card .model-info{flex:1}.model-card .model-name{font-weight:700;font-size:14px;color:#f4f2ff}.model-card .model-desc{font-size:12px;color:#a3acca;margin-top:3px}.model-card .model-size{font-size:11px;color:#81e7ce}.model-card.active-model{border-color:#695cf0;background:#1e1d42}.model-status-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#151d32;border:1px solid #303953;border-radius:14px;margin-bottom:12px;font-size:13px}.model-status-bar .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}.dot.online{background:#80e8cf}.dot.offline{background:#ff8a8a}.chat-model-bar{display:flex;align-items:center;gap:8px;padding:8px 0;font-size:12px;color:#a3acca}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.orb{width:184px;height:184px}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.wrap{padding:17px 13px 45px}.panel{padding:16px}.nav button{padding:11px 8px}.top .pill{display:none}}
+</style></head><body><div class="wrap"><header class="top"><div class="brand"><div class="brandmark">✦</div><div><h1>POTTER <span class="glowtext">AI</span></h1><div class="tiny muted">PERSONAL INTELLIGENCE</div></div></div><div class="pill" id="ollama-pill">● LOCAL-FIRST</div></header>
+
+<nav class="nav" aria-label="Potter navigation"><button class="active" data-tab="home">✧ Assistant</button><button data-tab="chat">◉ Chat</button><button data-tab="vault">♜ Vault</button><button data-tab="models">🤖 Models</button><button data-tab="agents">⚙ Agents</button></nav>
+
+<!-- ── HOME ── -->
+<section id="home" class="view"><div class="panel hero"><div><div class="eyebrow">YOUR PERSONAL ASSISTANT</div><h2 id="greeting">Hello, Guest ✦</h2><p class="muted">Everyday help, with privacy at its core.</p><div class="notice">🔐 Guest access stays separate from Boss's notes, reminders, tasks and registered profiles.</div><div class="spaced buttons"><button class="btn" id="home-chat">Open conversation</button><button class="btn secondary" id="home-vault">Privacy Vault</button></div></div><div class="orb-wrap"><div class="orb" id="orb"><span class="symbol">≋</span></div><h3 id="voice-title">Ready to listen</h3><p class="tiny muted" id="voice-info">Tap to talk; background wake-word listening is not available in this web app.</p><div class="buttons" style="justify-content:center"><button class="btn" id="talk">🎙 Talk</button><button class="btn secondary" id="mute">🔊 Voice on</button></div></div></div><h3 class="spaced">Quick features</h3><div class="grid"><div class="tile"><span class="emoji">🧮</span><strong>Calculator</strong><small>Try "calculate 7 * 8"</small></div><div class="tile"><span class="emoji">🤖</span><strong>AI Chat</strong><small>Free local LLMs via Ollama</small></div><div class="tile"><span class="emoji">✅</span><strong>Task Manager</strong><small>Track private to-dos</small></div><div class="tile"><span class="emoji">🛡</span><strong>Guest Privacy</strong><small>Private APIs are locked</small></div></div><div class="status" id="home-status"></div></section>
+
+<!-- ── CHAT ── -->
+<section id="chat" class="view" hidden><div class="panel"><div class="row between"><h2>Conversation</h2><span class="pill" id="chat-role">GUEST</span></div>
+<div class="chat-model-bar"><span>Model:</span><strong id="chat-model-name">—</strong><span id="chat-ollama-dot" class="dot offline"></span><span id="chat-ollama-label" class="smallmuted">checking…</span></div>
+<div id="messages" class="messages" aria-live="polite"><div class="bubble">Hi! I'm Potter. Try "calculate 12 * 4", ask the time, or chat with a local AI model.</div></div><form class="formrow spaced" id="chat-form"><input id="question" placeholder="Ask Potter anything…" autocomplete="off" maxlength="3000" required><button class="btn">Send</button></form><div class="status" id="chat-status"></div></div></section>
+
+<!-- ── VAULT ── -->
+<section id="vault" class="view" hidden><div class="panel"><div class="row between"><h2>🔐 Privacy Vault</h2><span class="pill" id="role-label">GUEST</span></div><p class="notice">Voice recognition is not an authentication factor here. Boss content requires an authenticated session; guests cannot retrieve it.</p>
+<!-- Auth section — hidden since boss PIN is configured. Login only via internal session. -->
+<div id="auth" class="hide"><h3 id="auth-title">Unlock Boss Mode</h3><form class="formrow" id="auth-form"><input id="pin" type="password" autocomplete="current-password" minlength="8" maxlength="128" placeholder="Boss PIN (8+ characters)" required><button class="btn" id="auth-button">Unlock</button></form></div>
+<div id="private" class="hide stack spaced"><div class="row between"><strong class="safe">✓ Boss authenticated</strong><button class="btn secondary small" id="logout">Lock Vault</button></div>
+<div class="two"><div class="section"><h3>📝 Private notes</h3><form id="note-form" class="formrow"><input id="note" placeholder="Write a private note" maxlength="4000" required><button class="btn small">Save</button></form><ul class="items" id="notes"></ul></div>
+<div class="section"><h3>✅ Private tasks</h3><form id="task-form" class="formrow"><input id="task" placeholder="Add a task" maxlength="2000" required><button class="btn small">Add</button></form><ul class="items" id="tasks"></ul></div></div>
+<div class="section"><h3>⏰ Scheduled reminders</h3><form id="reminder-form" class="stack"><input id="reminder" placeholder="What should I remind you about?" maxlength="2000" required><div class="formrow"><div style="flex:1"><label for="due">When should Potter remind you?</label><input id="due" type="datetime-local" required></div><button class="btn" type="submit" style="align-self:end">Save reminder</button></div></form><ul class="items" id="reminders"></ul><p class="smallmuted">Notifications are checked while this page is running. This is not a reliable OS alarm or background push service.</p><button id="notification-button" class="btn outline small">Enable browser notifications</button></div>
+<div class="section"><h3>👥 Consented guest names</h3><form id="guest-form" class="stack"><input id="guest" placeholder="Guest name" maxlength="60" required><div class="checkrow"><input id="guest-consent" type="checkbox" required><label for="guest-consent">This person agreed to have their name saved</label></div><button class="btn secondary" type="submit">Save guest name</button></form><ul class="items" id="guests"></ul><p class="smallmuted">Name storage is not biometric enrollment. Automatic speaker recognition needs an additional verified voice module.</p></div></div><div class="status" id="vault-status"></div></div></section>
+
+<!-- ── MODELS ── -->
+<section id="models" class="view" hidden><div class="panel"><div class="row between"><h2>🤖 AI Models</h2><span class="pill" id="models-pill">checking…</span></div>
+<p class="muted tiny">Manage your local LLM models powered by Ollama. All models are free and run entirely on your machine.</p>
+<div class="model-status-bar"><span class="dot" id="ollama-status-dot"></span><span id="ollama-status-text">Checking Ollama…</span></div>
+<div class="section spaced"><h3>⚡ Active Model</h3><div id="active-model-display" class="model-card"><div class="model-info"><div class="model-name">—</div><div class="model-desc">No model selected</div></div></div></div>
+<div class="section spaced"><h3>📦 Available Models</h3><p class="smallmuted">Click "Pull" to download a model, then "Use" to activate it for conversations.</p><div id="model-list" class="stack"></div></div>
+<div class="status" id="models-status"></div>
+</div></section>
+
+<!-- ── AGENTS ── -->
+<section id="agents" class="view" hidden><div class="panel"><h2>Potter Agents</h2><p class="muted tiny">An honest view of what is connected and what still needs implementation.</p><div id="agent-cards" class="two"></div><div class="notice spaced">Local conversational AI is powered by Ollama. Go to the Models tab to download and switch between free LLMs. Reliable always-on hotwords on Android/iOS, actual speaker biometrics, and Hugging Face streaming voice are separate integrations—not shipped in this browser-first build.</div></div></section>
+<footer class="footer">POTTER AI 2.0 • Local-first PWA • Ollama-powered LLMs • Secure private data endpoints</footer></div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+let role='guest',configured=false,recognition=null,voiceOn=true,reminderTimer=null,ollamaOnline=false,installedModels=[];
+
+async function api(path,body,method){const r=await fetch('/api/'+path,{method:method||(body===undefined?'GET':'POST'),headers:{'Content-Type':'application/json'},credentials:'same-origin',body:body===undefined?undefined:JSON.stringify(body)});let j;try{j=await r.json()}catch{throw Error('Unexpected server response')}if(!r.ok)throw Error(typeof j.detail==='string'?j.detail:'Request failed ('+r.status+')');return j}
+function errtext(e){return e?.message||'Something went wrong'}
+
+function tab(name){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));document.querySelectorAll('.view').forEach(v=>v.hidden=v.id!==name);if(name==='vault'&&role==='boss')loadPrivate();if(name==='agents')loadAgents();if(name==='models')loadModels()}
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>tab(b.dataset.tab)));$('home-chat').onclick=()=>tab('chat');$('home-vault').onclick=()=>tab('vault');
+
+function say(text){if(!voiceOn||!('speechSynthesis'in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.rate=1.03;speechSynthesis.speak(u)}
+function bubble(kind,text){const el=document.createElement('div');el.className='bubble'+(kind==='you'?' you':'');el.textContent=(kind==='you'?'You: ':'Potter: ')+text;$('messages').append(el);$('messages').scrollTop=$('messages').scrollHeight}
+async function send(q){if(!q.trim())return;bubble('you',q);$('chat-status').textContent='Thinking…';try{const out=await api('chat',{text:q});bubble('potter',out.reply);say(out.reply);$('chat-status').textContent='Agent: '+out.agent}catch(e){$('chat-status').textContent=errtext(e)}}
+$('chat-form').onsubmit=e=>{e.preventDefault();const q=$('question').value;$('question').value='';send(q)};
+
+async function refresh(){
+  try{
+    const s=await api('status');role=s.role;configured=s.configured;
+    $('greeting').textContent='Hello, '+(role==='boss'?'Boss':'Guest')+' ✦';
+    $('role-label').textContent=role.toUpperCase();
+    $('chat-role').textContent=role.toUpperCase();
+    // Boss PIN is already set — never show the setup/login form on the interface
+    $('auth').classList.add('hide');
+    $('private').classList.toggle('hide',role!=='boss');
+    if(role==='boss')loadPrivate();
+    // Update model display
+    $('chat-model-name').textContent=s.model||'—';
+  }catch(e){$('home-status').textContent='Cannot connect: '+errtext(e)}
+}
+
+// Auth form kept functional but hidden — only accessible programmatically if needed
+$('auth-form').onsubmit=async e=>{e.preventDefault();try{await api(configured?'login':'setup',{pin:$('pin').value});$('pin').value='';$('vault-status').textContent='Vault unlocked';await refresh()}catch(ex){$('vault-status').textContent=errtext(ex)}};
+$('logout').onclick=async()=>{try{await api('logout',{});await refresh();$('vault-status').textContent='Vault locked'}catch(e){$('vault-status').textContent=errtext(e)}};
+
+function textNode(tag,text,className){const el=document.createElement(tag);el.textContent=text;if(className)el.className=className;return el}
+function rowItem(text,extra,actions=[]){const li=document.createElement('li'),container=document.createElement('div');container.className='text';container.append(textNode('div',text));if(extra)container.append(textNode('div',extra,'meta'));li.append(container);for(const a of actions){const btn=document.createElement('button');btn.className='btn small '+(a.danger?'warn':'secondary');btn.textContent=a.label;btn.onclick=a.onclick;li.append(btn)}return li}
+async function loadPrivate(){if(role!=='boss')return;try{const [notes,tasks,reminders,guests]=await Promise.all(['notes','tasks','reminders','guests'].map(p=>api(p)));$('notes').replaceChildren(...notes.map(n=>rowItem(n.body,new Date(n.created).toLocaleString(),[{label:'Delete',danger:true,onclick:()=>remove('notes/'+n.id)}])));$('tasks').replaceChildren(...tasks.map(t=>{const li=rowItem(t.body,t.done?'Completed':'Pending',[{label:t.done?'Reopen':'Done',onclick:()=>toggleTask(t)},{label:'×',danger:true,onclick:()=>remove('tasks/'+t.id)}]);if(t.done)li.querySelector('.text').classList.add('taskdone');return li}));$('reminders').replaceChildren(...reminders.map(r=>rowItem(r.body,new Date(r.due).toLocaleString()+(r.delivered?' • delivered while online':''),[{label:'Delete',danger:true,onclick:()=>remove('reminders/'+r.id)}])));$('guests').replaceChildren(...guests.map(g=>rowItem(g.name,'Consent recorded · voice not enrolled',[{label:'Remove',danger:true,onclick:()=>remove('guests/'+g.id)}])));}catch(e){$('vault-status').textContent=errtext(e);if(/authentication/i.test(errtext(e)))refresh()}}
+async function remove(path){try{await api(path,undefined,'DELETE');await loadPrivate()}catch(e){$('vault-status').textContent=errtext(e)}}
+async function toggleTask(task){try{await api('tasks/'+task.id,{done:!task.done},'PATCH');await loadPrivate()}catch(e){$('vault-status').textContent=errtext(e)}}
+function wireForm(form,field,path,extra=()=>({})){ $(form).onsubmit=async e=>{e.preventDefault();try{const body={text:$(field).value,...extra()};await api(path,body);$(field).value='';$('vault-status').textContent='Saved';await loadPrivate()}catch(ex){$('vault-status').textContent=errtext(ex)}}}
+wireForm('note-form','note','notes');wireForm('task-form','task','tasks');wireForm('reminder-form','reminder','reminders',()=>{const date=$('due').value;const dt=new Date(date);if(!date||Number.isNaN(dt.getTime()))throw Error('Choose a valid date and time');return {due:dt.toISOString()}});
+$('guest-form').onsubmit=async e=>{e.preventDefault();try{await api('guests',{name:$('guest').value,consent:$('guest-consent').checked});$('guest').value='';$('guest-consent').checked=false;$('vault-status').textContent='Guest name saved. Voice enrollment is still required.';loadPrivate()}catch(ex){$('vault-status').textContent=errtext(ex)}};
+
+async function loadAgents(){try{const out=await api('agents');$('agent-cards').replaceChildren(...out.agents.map(a=>{const box=document.createElement('div');box.className='agent';box.append(textNode('div',a.available?'● CONNECTED':'○ NOT CONNECTED','tag'+(a.available?'':' later')));box.append(textNode('h3',a.name));box.append(textNode('p',a.description));return box}))}catch(e){$('agent-cards').textContent=errtext(e)}}
+
+// ── MODEL MANAGEMENT ──
+async function loadModels(){
+  try{
+    const status=await api('ollama/status');
+    ollamaOnline=status.online;
+    installedModels=status.installed||[];
+    const active=status.active;
+    const catalog=status.catalog||[];
+
+    // Update status indicators
+    $('ollama-status-dot').className='dot '+(ollamaOnline?'online':'offline');
+    $('ollama-status-text').textContent=ollamaOnline?'Ollama is running ('+installedModels.length+' model'+(installedModels.length!==1?'s':'')+' installed)':'Ollama is offline — install and start Ollama to use AI chat';
+    $('models-pill').textContent=ollamaOnline?'● ONLINE':'● OFFLINE';
+    $('models-pill').className='pill'+(ollamaOnline?'':' offline');
+
+    // Update header pill
+    $('ollama-pill').textContent=ollamaOnline?'● AI ONLINE':'● AI OFFLINE';
+    $('ollama-pill').className='pill'+(ollamaOnline?'':' offline');
+
+    // Update chat bar
+    $('chat-model-name').textContent=active||'—';
+    $('chat-ollama-dot').className='dot '+(ollamaOnline?'online':'offline');
+    $('chat-ollama-label').textContent=ollamaOnline?'online':'offline — go to Models tab';
+
+    // Active model display
+    const activeInfo=catalog.find(m=>m.id===active)||{id:active,name:active,desc:'Custom model',size:'—'};
+    const isInstalled=installedModels.some(m=>m===active||m.startsWith(active.split(':')[0]));
+    $('active-model-display').innerHTML=`<div class="model-info"><div class="model-name">${activeInfo.name||active}</div><div class="model-desc">${activeInfo.desc||''}</div><div class="model-size">${activeInfo.size||''} ${isInstalled?'• ✓ Installed':'• ⚠ Not downloaded'}</div></div>`;
+
+    // Build model cards
+    const container=$('model-list');
+    container.replaceChildren(...catalog.map(m=>{
+      const installed=installedModels.some(im=>im===m.id||im.startsWith(m.id.split(':')[0]));
+      const isActive=m.id===active;
+      const card=document.createElement('div');
+      card.className='model-card'+(isActive?' active-model':'');
+      card.innerHTML=`
+        <div class="model-info">
+          <div class="model-name">${m.name} ${isActive?'<span style="color:#81e7ce;font-size:11px">★ ACTIVE</span>':''}</div>
+          <div class="model-desc">${m.desc}</div>
+          <div class="model-size">${m.size} ${installed?'• ✓ Downloaded':'• Not downloaded'}</div>
+        </div>
+        <div class="buttons"></div>`;
+      const btns=card.querySelector('.buttons');
+      if(!installed){
+        const pullBtn=document.createElement('button');
+        pullBtn.className='btn small';pullBtn.textContent='⬇ Pull';
+        pullBtn.onclick=()=>pullModel(m.id,pullBtn);
+        btns.append(pullBtn);
+      }
+      if(installed&&!isActive){
+        const useBtn=document.createElement('button');
+        useBtn.className='btn small success';useBtn.textContent='✓ Use';
+        useBtn.onclick=()=>selectModel(m.id);
+        btns.append(useBtn);
+      }
+      if(isActive&&installed){
+        const badge=document.createElement('span');
+        badge.className='pill';badge.textContent='● Active';badge.style.marginLeft='8px';
+        btns.append(badge);
+      }
+      return card;
+    }));
+  }catch(e){
+    $('models-status').textContent=errtext(e);
+  }
+}
+
+async function pullModel(modelId,btn){
+  if(!ollamaOnline){$('models-status').textContent='Ollama is offline. Start Ollama first.';return}
+  btn.disabled=true;btn.textContent='Pulling…';
+  $('models-status').textContent='Downloading '+modelId+'… This may take a few minutes.';
+  try{
+    await api('ollama/pull',{model:modelId});
+    $('models-status').textContent=modelId+' downloaded successfully!';
+    await loadModels();
+  }catch(e){
+    $('models-status').textContent='Failed to pull: '+errtext(e);
+    btn.disabled=false;btn.textContent='⬇ Pull';
+  }
+}
+
+async function selectModel(modelId){
+  try{
+    await api('ollama/select',{model:modelId});
+    $('models-status').textContent='Switched to '+modelId;
+    await loadModels();
+    await refresh();
+  }catch(e){$('models-status').textContent=errtext(e)}
+}
+
+$('notification-button').onclick=async()=>{if(!('Notification'in window)){$('vault-status').textContent='Notifications unsupported in this browser';return}const result=await Notification.requestPermission();$('vault-status').textContent='Notification permission: '+result};
+async function pollReminders(){if(role!=='boss'||document.hidden)return;try{const due=await api('reminders/due');for(const item of due){$('vault-status').textContent='⏰ Reminder: '+item.body;if('Notification'in window&&Notification.permission==='granted')new Notification('Potter Reminder',{body:item.body});else say('Boss, reminder: '+item.body)}if(due.length)loadPrivate()}catch(e){if(/authentication/i.test(errtext(e)))refresh()}}
+reminderTimer=setInterval(pollReminders,15000);
+
+$('mute').onclick=()=>{voiceOn=!voiceOn;$('mute').textContent=voiceOn?'🔊 Voice on':'🔇 Voice off';if(!voiceOn&&'speechSynthesis'in window)speechSynthesis.cancel()};
+$('talk').onclick=()=>{const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){$('voice-info').textContent='Browser speech input is unsupported. Use typed chat, or a compatible browser.';return}if(recognition){recognition.stop();return}recognition=new SR();recognition.lang='en-IN';recognition.interimResults=false;recognition.onstart=()=>{$('orb').classList.add('live');$('voice-title').textContent='Listening…';$('talk').textContent='Stop'};recognition.onresult=e=>{const q=e.results[0][0].transcript;tab('chat');send(q)};recognition.onerror=e=>{$('voice-info').textContent='Microphone: '+e.error};recognition.onend=()=>{$('orb').classList.remove('live');$('voice-title').textContent='Ready to listen';$('talk').textContent='🎙 Talk';recognition=null};try{recognition.start()}catch(e){$('voice-info').textContent=errtext(e);recognition=null}};
+
+// Initial load
+refresh();
+loadModels();
+// Refresh model status periodically
+setInterval(loadModels,30000);
+</script></body></html>
